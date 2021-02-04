@@ -14,7 +14,9 @@ export default function Navbar() {
       <li>
         <Link to={'/project-2/decorativearts'}>Decorative Arts</Link>
       </li>
-      
+      <li>
+        <Link to={'/project-2/books'}>Books</Link>
+      </li>
     </ul>
   </div>
 }

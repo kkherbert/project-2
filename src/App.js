@@ -1,12 +1,14 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
-import './styles/style.scss'
+// import './styles/style.scss'
 
 import Navbar from './components/Navbar'
 import Home from './components/Home'
 import Textiles from './components/Textiles'
 import DecorativeArts from './components/DecorativeArts'
+import Books from './components/Books'
+
 
 const App = () => (
   <BrowserRouter>
@@ -15,6 +17,7 @@ const App = () => (
       <Route exact path="/project-2" component={Home}/>
       <Route path="/project-2/textiles" component={Textiles}/>
       <Route path="/project-2/decorativearts" component={DecorativeArts}/>
+      <Route path="/project-2/books" component={Books}/>
     </Switch>
   </BrowserRouter>
 )
