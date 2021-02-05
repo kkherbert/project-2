@@ -6,18 +6,14 @@
 }
 .home-body {
   height: 100vh;
-  background-color: #5f9ea0;
+  background-color: #dbd7d2;
 }
-body {
-  height: 100vh;
-  background-color: #white;
-}
+
 /* navbar */
 .nav-bar {
   display: flex;
   flex-direction: column;
   text-align: center;
-  /* background-color: #bab86c; */
   background-color: #5f9ea0;
   color: white; 
   font-family: 'Lexend Mega', sans-serif;
@@ -48,6 +44,25 @@ li {
   font-family: 'Lexend Mega', sans-serif;
 }
 
+.books-nav {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  background-color: #5f9ea0;
+  color: white; 
+  font-family: 'Lexend Mega', sans-serif;
+  
+}
+
+.books-nav-links {
+  display: flex;
+  flex-direction: row;
+  font-family: 'Lexend Mega', sans-serif;
+  color: white;
+  padding: 20px 0 10px 0;
+  width: 80%;
+}
+
 a {
   text-decoration: none;
   color: white;
@@ -57,14 +72,10 @@ a:hover {
   color: #a5694f;
 }
 
-/* header {
-  background-color: #bab86c;
-} */
 
 
 /* homepage */e
 .main-home {
-  /* background-color: #6e5160; */
   background-color: #a5694f;
   font-family: 'Alegreya', serif;
   display: flex;
@@ -80,6 +91,18 @@ a:hover {
   padding: 3%;
 }
 
+#individual-navs-copy {
+  font-family: 'Alegreya', serif;
+  text-align: center;
+  padding: 1.5%;
+}
+
+.top-of-page-copy-links {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 #category-copy {
   font-family: 'Alegreya', serif;
   text-align: center;
@@ -92,9 +115,7 @@ a:hover {
   align-items: center;
   flex-direction: row;
   background-color: #dbd7d2;
-
   /* border: 5px solid green; */
-  /* height: 150%; */
   height: 100%;
   width: 100%;
   padding: 3%;
@@ -120,11 +141,9 @@ a:hover {
 .darts-home {
   /* border: 5px solid orange; */
   display: flex;
-
   background-image:
   linear-gradient(rgba(105, 105, 105, 0.5), rgba(105, 105, 105, 0.5)),
   url('https://openaccess-cdn.clevelandart.org/1962.23/1962.23_web.jpg');
-  
   background-size: cover;
   flex: 1;
   height: 500px;
@@ -175,6 +194,12 @@ img {
   width: 300px;
 }
 
+/* collection pages */
+.card-container-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .card-container {
   display: flex;
   flex-direction: row;
@@ -217,8 +242,69 @@ img {
   padding: 1%;
 }
 
+/* BOOKS NAV */
+.books-nav {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  background-color: #a0522d;
+  color: white; 
+  font-family: 'Lexend Mega', sans-serif;
+  width: 100%;
+  margin: 5px 0px 0px 0px;
+}
+
+.books-nav-links {
+  display: flex;
+  flex-direction: row;
+  font-family: 'Lexend Mega', sans-serif;
+  color: white;
+  padding: 20px 0 10px 0;
+  width: 80%;
+}
+
+/* DECORATIVE ARTS */
+.darts-nav {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  background-color: #a0522d;
+  color: white; 
+  font-family: 'Lexend Mega', sans-serif;
+  width: 100%;
+  margin: 5px 0px 0px 0px;
+}
+
+.darts-nav-links {
+  display: flex;
+  flex-direction: row;
+  font-family: 'Lexend Mega', sans-serif;
+  color: white;
+  padding: 20px 0 10px 0;
+  width: 80%;
+}
 
 
+/* TEXTILES */
+.textiles-nav {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  background-color: #a0522d;
+  color: white; 
+  font-family: 'Lexend Mega', sans-serif;
+  width: 100%;
+  margin: 5px 0px 0px 0px;
+}
+
+.textiles-nav-links {
+  display: flex;
+  flex-direction: row;
+  font-family: 'Lexend Mega', sans-serif;
+  color: white;
+  padding: 20px 0 10px 0;
+  width: 80%;
+}
 
 /* footer */
 .footer {

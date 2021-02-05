@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 
 export default function Home() {
-  return <body className="home-body">
+  return <div className="home-body">
     <main className="main-home">
 
       <div className="homepage">
@@ -49,6 +49,6 @@ export default function Home() {
 
     </main >
 
-  </body>
+  </div>
 }
 
