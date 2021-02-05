@@ -1,9 +1,10 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
-// import './styles/style.scss'
+import './styles/style.css'
 
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 import Home from './components/Home'
 import Textiles from './components/Textiles'
 import DecorativeArts from './components/DecorativeArts'
@@ -19,6 +20,7 @@ const App = () => (
       <Route path="/project-2/decorativearts" component={DecorativeArts}/>
       <Route path="/project-2/books" component={Books}/>
     </Switch>
+    <Footer />
   </BrowserRouter>
 )
 
