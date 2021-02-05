@@ -4,7 +4,14 @@
   /* font-family: 'Alegreya', serif; */
   margin: auto;
 }
-
+.home-body {
+  height: 100vh;
+  background-color: #5f9ea0;
+}
+body {
+  height: 100vh;
+  background-color: #white;
+}
 /* navbar */
 .nav-bar {
   display: flex;
@@ -14,25 +21,40 @@
   background-color: #5f9ea0;
   color: white; 
   font-family: 'Lexend Mega', sans-serif;
+  
+}
+
+h1 {
+  padding: 20px 0 0 0;
 }
 
 .nav-bar-links {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   font-family: 'Lexend Mega', sans-serif;
   color: white;
+  padding: 20px 0 10px 0;
+  width: 80%;
+
 }
 
 li {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
   padding: 0% 5%;
-  text-decoration: none;
   color: white;
   font-size: 100%;
   font-family: 'Lexend Mega', sans-serif;
+}
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: #a5694f;
 }
 
 /* header {
@@ -48,9 +70,17 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  
 }
 
 #explore-copy {
+  font-family: 'Alegreya', serif;
+  text-align: center;
+  background-color: #dbd7d2;
+  padding: 3%;
+}
+
+#category-copy {
   font-family: 'Alegreya', serif;
   text-align: center;
   background-color: #dbd7d2;
@@ -67,6 +97,8 @@ li {
   /* height: 150%; */
   height: 100%;
   width: 100%;
+  padding: 3%;
+
 }
 
 .textiles-home {
@@ -76,12 +108,13 @@ li {
   linear-gradient(rgba(160, 82, 45, 0.5), rgba(160, 82, 45, 0.5)),
   url('https://openaccess-cdn.clevelandart.org/1926.533/1926.533_web.jpg');
   background-size: cover;
-  flex-grow: 1;
-  height: 300px;
+  flex: 1;
+  height: 500px;
   width: 33vw;
   background-position: center;
   justify-content: center;
   align-items: center;
+
 }
 
 .darts-home {
@@ -93,12 +126,13 @@ li {
   url('https://openaccess-cdn.clevelandart.org/1962.23/1962.23_web.jpg');
   
   background-size: cover;
-  flex-grow: 1;
-  height: 300px;
+  flex: 1;
+  height: 500px;
   width: 33vw;
   background-position: center;
   justify-content: center;
   align-items: center;
+
 }
 
 .books-home {
@@ -109,11 +143,12 @@ li {
     url('https://openaccess-cdn.clevelandart.org/1924.746.2.a/1924.746.2.a_web.jpg');
   background-size: cover;
   background-position: center;
-  flex-grow: 1;
-  height: 300px;
+  flex: 1;
+  height: 500px;
   width: 33vw;
   justify-content: center;
   align-items: center;
+
 }
 
 #home-copy {
@@ -122,6 +157,7 @@ li {
   /* background-color: white; */
   justify-content: center;
   align-items: center;
+  text-align: center;
   font-family: 'Alegreya', serif;
   text-decoration: none;
 }
@@ -170,6 +206,15 @@ img {
 .title {
   background-color: #a0522d;
   color: white;
+  padding: 1%;
+}
+
+.image {
+  padding: 1%;
+}
+
+.description {
+  padding: 1%;
 }
 
 
@@ -183,4 +228,5 @@ img {
   font-size: 20px;
   text-align: center;
   padding: 2%;
+  margin: 0 0 10px 0;
 }
