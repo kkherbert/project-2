@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import ClipLoader from 'react-spinners/ClipLoader'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 export default function Books() {
@@ -51,42 +51,71 @@ export default function Books() {
         </li>
       </ul>
     </div>
+    
     <div className="card-container">
       {books.filter(item => {
         // console.log(item)
         return (filter === 'All' || filter === item.type.toLowerCase())
-      }).map(item => {
+      })
+        .map(item => {
 
-        if (item.fun_fact === null && item.wall_description === null || item.wall_description === null) {
-          return <div className="card" key={item.id}>
-            <h3 className="title">{item.title}</h3>
-            <img className="image" src={item.images.web.url} alt={item.title} width='200' />
-            <h3 className="date">Date: {item.creation_date}</h3>
-            <h3 className="culture">Culture: {item.culture}</h3>
-          </div>
-        } else if (item.fun_fact === null) {
-          return <div className="card" key={item.id}>
-            <h3 className="title">{item.title}</h3>
-            <img className="image" src={item.images.web.url} alt={item.title} width='200' />
-            <h3 className="date">Date: {item.creation_date}</h3>
-            <h3 className="culture">Culture: {item.culture}</h3>
-            <h4 className="description">Description: {item.wall_description}</h4>
-          </div>
-        } else {
-          return <div className="card" key={item.id}>
-            <h3 className="title">{item.title}</h3>
-            <img className="image" src={item.images.web.url} alt={item.title} width='200' />
-            <h4 className="date">Date: {item.creation_date}</h4>
-            <h3 className="culture">Culture: {item.culture}</h3>
-            <h4 className="description">Description: {item.wall_description}</h4>
-            <h4 className="fun-fact">Fun Fact: {item.fun_fact}</h4>
-          </div>
-        }
-      })}
+          // <Link key={item.id} to {{
+          //   pathname: `/project-2/book/${item.id}`,
+          //   state: {
+          //     name: item.title
+          //   }
+          // }}>
+
+          return <Link key={item.id} to={`/project-2/book/${item.id}`}>
+
+            <div className="card" key={item.id}>
+              <h3 className="title">{item.title}</h3>
+              <img className="image" src={item.images.web.url} alt={item.title} width='200' />
+              <h3 className="date">Date: {item.creation_date}</h3>
+              <h3 className="culture">Culture: {item.culture}</h3>
+            </div>
+          </Link>
+
+        })}
+
     </div>
   </div>
 
-
-
 }
 
+
+
+
+      //  if (item.fun_fact === null && item.wall_description === null || item.wall_description === null) {
+      //    return <Link key={item.id} to {{
+      //      pathname: `/book/${item.id}`,
+      //      state: {
+      //        name: item.title
+      //      }
+      //    }}>
+      //    <div className="card" key={item.id}>
+      //      <h3 className="title">{item.title}</h3>
+      //      <img className="image" src={item.images.web.url} alt={item.title} width='200' />
+      //      <h3 className="date">Date: {item.creation_date}</h3>
+      //      <h3 className="culture">Culture: {item.culture}</h3>
+      //    </div>
+      //    </Link>
+      //  } else if (item.fun_fact === null) {
+      //    return <div className="card" key={item.id}>
+      //      <h3 className="title">{item.title}</h3>
+      //      <img className="image" src={item.images.web.url} alt={item.title} width='200' />
+      //      <h3 className="date">Date: {item.creation_date}</h3>
+      //      <h3 className="culture">Culture: {item.culture}</h3>
+          //  <h4 className="description">Description: {item.wall_description}</h4>
+      //    </div>
+      //  } else {
+      //    return <div className="card" key={item.id}>
+      //      <h3 className="title">{item.title}</h3>
+      //      <img className="image" src={item.images.web.url} alt={item.title} width='200' />
+      //      <h4 className="date">Date: {item.creation_date}</h4>
+      //      <h3 className="culture">Culture: {item.culture}</h3>
+      //      <h4 className="description">Description: {item.wall_description}</h4>
+          //  <h4 className="fun-fact">Fun Fact: {item.fun_fact}</h4>
+      //    </div>
+      //  }
+       
