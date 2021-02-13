@@ -8,6 +8,8 @@ export default function DecArts() {
   const [decArts, updateDecArts] = useState([])
   const [loading, updateLoading] = useState(true)
   const [filter, updateFilter] = useState('All')
+  const _ = require('lodash')
+
 
   useEffect(() => {
     axios.all([
@@ -20,7 +22,11 @@ export default function DecArts() {
     ])
       .then(axios.spread((...responses) => {
         // updateDecArts(responses[0].data.data.concat(responses[1].data.data, responses[2].data.data, responses[3].data.data, responses[4].data.data, responses[5].data.data).slice(0,10))
-        updateDecArts(responses[0].data.data.concat(responses[1].data.data, responses[2].data.data, responses[3].data.data, responses[4].data.data, responses[5].data.data))
+        // updateDecArts(responses[0].data.data.concat(responses[1].data.data, responses[2].data.data, responses[3].data.data, responses[4].data.data, responses[5].data.data))
+
+        const decArtsArray = responses[0].data.data.concat(responses[1].data.data, responses[2].data.data, responses[3].data.data, responses[4].data.data, responses[5].data.data)
+        const shuffledArray = _.shuffle(decArtsArray)
+        updateDecArts(shuffledArray)
 
         updateLoading(false)
         console.log(updateDecArts, 'hiiiiii')

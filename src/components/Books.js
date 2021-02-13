@@ -9,6 +9,7 @@ export default function Books() {
   const [books, updateBooks] = useState([])
   const [loading, updateLoading] = useState(true)
   const [filter, updateFilter] = useState('All')
+  const _ = require('lodash')
 
   useEffect(() => {
     axios.all([
@@ -17,8 +18,10 @@ export default function Books() {
       axios.get('https://openaccess-api.clevelandart.org/api/artworks/?department=Islamic%20Art&has_image=1&type=Book%20Binding')
     ])
       .then(axios.spread((...responses) => {
+        const booksArray = responses[0].data.data.concat(responses[1].data.data, responses[2].data.data)
+        const shuffledBooksArray = _.shuffle(booksArray)
         // updateBooks(responses[0].data.data.concat(responses[1].data.data, responses[2].data.data).slice(0,10))
-        updateBooks(responses[0].data.data.concat(responses[1].data.data, responses[2].data.data))
+        updateBooks(shuffledBooksArray)
         updateLoading(false)
       }))
   }, [])

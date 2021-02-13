@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "lodash.shuffle": "^4.2.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-paginate": "^7.0.0",

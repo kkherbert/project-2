@@ -63,6 +63,11 @@ li {
   width: 80%;
 }
 
+.books-nav-links:hover {
+  color: #5f9ea0;
+  cursor: pointer;
+}
+
 a {
   text-decoration: none;
   color: white;
@@ -275,6 +280,11 @@ img {
   margin: 5px 0px 0px 0px;
 }
 
+.darts-nav-links:hover {
+  color: #5f9ea0;
+  cursor: pointer;
+}
+
 .darts-nav-links {
   display: flex;
   flex-direction: row;
@@ -282,6 +292,8 @@ img {
   color: white;
   padding: 20px 0 10px 0;
   width: 80%;
+  text-decoration: underline;
+
 }
 
 
@@ -296,7 +308,10 @@ img {
   width: 100%;
   margin: 5px 0px 0px 0px;
 }
-
+.textiles-nav-links:hover {
+  color: #5f9ea0;
+  cursor: pointer;
+}
 .textiles-nav-links {
   display: flex;
   flex-direction: row;
@@ -305,6 +320,7 @@ img {
   padding: 20px 0 10px 0;
   width: 80%;
 }
+
 
 /* footer */
 .footer {

@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import ClipLoader from 'react-spinners/ClipLoader'
+// import { shuffle } from 'lodash'
+
 export default function Textiles() {
   const [textiles, updateTextiles] = useState([])
   const [loading, updateLoading] = useState(true)
   const [filter, updateFilter] = useState('All')
+  const _ = require('lodash')
+
+  
   useEffect(() => {
     axios.all([
       axios.get('https://openaccess-api.clevelandart.org/api/artworks/?has_image=1&collection=T-Islamic&type=Carpet&q=Islamic'),
@@ -18,18 +23,23 @@ export default function Textiles() {
       axios.get('https://openaccess-api.clevelandart.org/api/artworks/?has_image=1&collection=T-Islamic&type=Spindle%20Whorl&q=Islamic')
     ])
       .then(axios.spread((...responses) => {
-        // const textilesArray = responses[0].data.data.concat(responses[1].data.data, responses[2].data.data, responses[3].data.data, responses[4].data.data, responses[5].data.data, responses[6].data.data, responses[7].data.data, responses[8].data.data)
-        // updateTextiles(textilesArray)
-        updateTextiles(responses[0].data.data.concat(responses[1].data.data, responses[2].data.data, responses[3].data.data, responses[4].data.data, responses[5].data.data, responses[6].data.data, responses[7].data.data, responses[8].data.data))
+        const textilesArray = responses[0].data.data.concat(responses[1].data.data, responses[2].data.data, responses[3].data.data, responses[4].data.data, responses[5].data.data, responses[6].data.data, responses[7].data.data, responses[8].data.data)
+        const shuffledArray = _.shuffle(textilesArray)
+        updateTextiles(shuffledArray)
+        // updateTextiles(responses[0].data.data.concat(responses[1].data.data, responses[2].data.data, responses[3].data.data, responses[4].data.data, responses[5].data.data, responses[6].data.data, responses[7].data.data, responses[8].data.data))
         updateLoading(false)
         console.log(updateTextiles, 'textilessss')
       }))
   }, [])
+  
+  
   console.log(textiles[1])
   //guard condition
   if (loading) {
     return <ClipLoader loading={loading} size={35} color="#A0522D" />
   }
+  
+  
   return <div className="card-container-container">
     <div className="top-of-page-copy-links">
       <h3 id="individual-navs-copy">Explore all items in this collection or click below to filter by country!</h3>
@@ -45,6 +55,8 @@ export default function Textiles() {
         <li className="textiles-nav-links" onClick={(event) => updateFilter('velvet')} value={'velvet'}>Velvet</li>
       </ul>
     </div>
+    
+    
     <div className="card-container">
       {textiles.filter(item => {
         return (filter === 'All' || filter === item.type.toLowerCase())
