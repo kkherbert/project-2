@@ -18,9 +18,9 @@ const App = () => (
     <Navbar />
     <Switch>
       <Route exact path="/project-2" component={Home}/>
-      <Route path="/project-2/textiles" component={Textiles}/>
-      <Route path="/project-2/decorativearts" component={DecorativeArts}/>
-      <Route path="/project-2/decorativeart2" component={DecorativeArt2}/>
+      <Route exact path="/project-2/textiles" component={Textiles}/>
+      <Route exact path="/project-2/decorativearts" component={DecorativeArts}/>
+      <Route exact path="/project-2/decorativeart2" component={DecorativeArt2}/>
       <Route exact path="/project-2/books" component={Books}/>
       <Route exact path="/project-2/book2" component={Book2}/>
     </Switch>
