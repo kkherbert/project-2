@@ -3,8 +3,8 @@
 
 My second web development project for the GA Software Engineering Immersive course was pair-coded with my classmate <a href="https://github.com/bojanacodes" target="_blank" rel="noreferrer">Bojana</a>. We built a React page that integrated functionality from a third-party API (in this case, the <a href="https://www.clevelandart.org/" target="_blank" rel="noreferrer">Cleveland Museum of Art</a>.
 
-### Brief: Build a React application that consumes a public API</h5>
-### Timeframe: 48 hours</h5>
+### Brief: Build a React application that consumes a public API
+### Timeframe: 48 hours
 
 ## To get started:
 1. Access the source code via the Code button
