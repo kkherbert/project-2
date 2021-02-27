@@ -32,6 +32,7 @@ My second web development project for the GA Software Engineering Immersive cour
 * Git
 * GitHub
 * Google Chrome dev tools
+* Google Fonts
 
 ## Process
 Both being history enthusiasts, Bojana and I decided to choose an API from the cultural field. After scouring the web and dissecting datasets with Insomnia REST Client, we settled to use API from the Cleveland Museum of Art to highlight their fantastic Islamic Art Collection (and even more fantastic usage of a controlled vocabulary, which made data curation a breeze). This dataset lists the 295 objects in the Museum's Islamic Art Department, as well as a curated portion of the Islamic Textile collection from which we pulled 624 of the 690 objects (excluding more modern art mimicking Islamic Art). After analyzing the dataset, we decided to divide our page into three main sections: Books, Decorative Arts and Textiles
