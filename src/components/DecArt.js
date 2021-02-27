@@ -26,8 +26,6 @@ export default function DecArt({ match, location }) {
     return <ClipLoader loading={loading} size={35} color="#a0522d" />
   }
 
-  // FIX!!!!!!!
-
 
   return <div className="individual-items-container">
 

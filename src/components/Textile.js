@@ -9,9 +9,6 @@ export default function Textile({ match, location }) {
   const [item, updateItem] = useState({})
   const [loading, updateLoading] = useState(true)
 
-
-  console.log(location)
-
   useEffect(() => {
     axios.get(`https://openaccess-api.clevelandart.org/api/artworks/${id}`)
       .then(({ data }) => {
@@ -25,9 +22,6 @@ export default function Textile({ match, location }) {
     { console.log('Hello I am loading') }
     return <ClipLoader loading={loading} size={35} color="#a0522d" />
   }
-
-  // FIX!!!!!!!
-
 
   return <div className="individual-items-container">
 
