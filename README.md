@@ -23,7 +23,7 @@ My second web development project for the GA Software Engineering Immersive cour
 * lodash
 
 ### API
-* * The Cleveland Museum of Art <a href="https://openaccess-api.clevelandart.org/" target="_blank" rel="noreferrer">API</a>
+* The Cleveland Museum of Art <a href="https://openaccess-api.clevelandart.org/" target="_blank" rel="noreferrer">API</a>
 
 ### Dev tools:
 * VS Code
@@ -128,6 +128,9 @@ The information we returned on the card was that information made available by t
   We repeated this exact logic on the Decorative Arts and Textiles pages. 
   
   ### Individual pages
+  ![Screen Shot 2021-02-27 at 9 34 22 AM](https://user-images.githubusercontent.com/73107893/109382159-0614d200-78df-11eb-9c67-e9b596ddc40e.png)
+
+  
   The individual object pages followed a very similar logic: we managed the state of the variables in order to pull specific information from a specific object with a specific id. We did return additional information, as there was more space: the credit line (or provenance of the object), a much longer description of the item and, my personal favorite, a fun fact. 
   
   ## Takeaways 
