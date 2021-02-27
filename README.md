@@ -137,7 +137,7 @@ The information we returned on the card was that information made available by t
   ## Takeaways 
   # Challenges
   * Finding the right API was difficult, as Bojana and I had a very clear idea of what we wanted to do from the beginning: work with museum data. We scoured the Internet and were really hoping to use the Smithsonian API, but we found that the Cleveland API was better organized, offered more dynamic information and was easier to manipulate.
-  * If you look at the Components section, you will notice two components: `Book2` and `DecorativeArt2`. We realized, with about two hours to go, that, for example, if you are on the Books page and you click through the filters and then click on `Books` in the main nav bar, it did not repopulate the page with the entire dataset. These extra components are our very hacky fixes.
+  *  We realized, with about two hours to go, that, for example, if you are on the Books page and you click through the filters and then click on `Books` in the main nav bar, it did not repopulate the page with the entire dataset. We tried a few very hacky fixes, but then decided to dedicate the rest of our allotted time to more pressing issues
   * This project overall was a bit of a challenge, as it was my first time building a React app. But a good challenge! One that you grow from
   
   # Wins
